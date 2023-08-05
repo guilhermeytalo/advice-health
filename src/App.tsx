@@ -5,7 +5,6 @@ import TableDefault from "./components/table.tsx";
 import SearchInput from "./components/search.tsx";
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <Container className='mainContent'>

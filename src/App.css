@@ -13,7 +13,7 @@
 .cardContent {
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
+  margin-right: 40px;
   flex-direction: column;
 }
 

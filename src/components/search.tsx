@@ -9,6 +9,7 @@ function SearchInput() {
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Control
+            style={{ width: '100%', padding: '10px' }}
             required
             type="text"
             placeholder="BUSCA"
