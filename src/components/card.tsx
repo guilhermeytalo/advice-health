@@ -1,19 +1,30 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function CardDefault() {
+type CardProps = {
+  title?: string;
+  title2?: string;
+  text?: string;
+  img?: string;
+}
+
+
+function CardDefault({
+  title,
+  title2,
+  text,
+  img,
+}: CardProps) {
   return (
     <Card style={{ display: 'flex', flexDirection: 'row' }}>
       <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'red', margin: '10px' }}>
-        <Card.Img variant="top" />
+        <Card.Img variant="top" src={img} />
       </div>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>{title}</Card.Title>
+        <Card.Title>{title2}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {text}
         </Card.Text>
-        {/* <Button variant="primary">Go somewhere</Button> */}
       </Card.Body>
     </Card>
   );

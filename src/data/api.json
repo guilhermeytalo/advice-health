@@ -1,8 +1,8 @@
 {
-    "statisticas": {
-      "consultasDoMes": 10,
-      "consultasConfirmadas": 5,
-      "consultasCanceladas": 5
+    "estatisticas": {
+      "consultasDoMes": "10",
+      "consultasConfirmadas": "5",
+      "consultasCanceladas": "5"
     },
     "proximosEventos": {
       "foto": "",
