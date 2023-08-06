@@ -5,7 +5,7 @@ function CardDefault() {
   return (
     <Card style={{ display: 'flex', flexDirection: 'row' }}>
       <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'red', margin: '10px' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Img variant="top" />
       </div>
       <Card.Body>
         <Card.Title>Card Title</Card.Title>
