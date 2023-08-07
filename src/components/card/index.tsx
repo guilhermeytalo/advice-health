@@ -1,29 +1,33 @@
 import Card from 'react-bootstrap/Card';
-
+import personProfile from '../../assets/personProfile.svg';
 type CardProps = {
   title?: string;
-  title2?: string;
   text?: string;
+  subText?: string;
   img?: string;
 }
 
 
 function CardDefault({
   title,
-  title2,
   text,
-  img,
+  subText,
 }: CardProps) {
+
+  const img = personProfile;
+
   return (
     <Card style={{ display: 'flex', flexDirection: 'row' }}>
       <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'red', margin: '10px' }}>
         <Card.Img variant="top" src={img} />
       </div>
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Title>{title2}</Card.Title>
-        <Card.Text>
+      <Card.Body style={{ margin: '0' }}>
+        <h5 style={{ margin: '0' }}>{title}</h5>
+        <Card.Text style={{ margin: '0', fontSize: '60px'}}>
           {text}
+        </Card.Text>
+        <Card.Text>
+          {subText}
         </Card.Text>
       </Card.Body>
     </Card>

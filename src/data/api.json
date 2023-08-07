@@ -7,7 +7,8 @@
     "proximosEventos": {
       "foto": "",
       "titulo": "Reunião",
-      "assunto": "Reunião com a equipe"
+      "assunto": "Reunião com a equipe",
+      "hora": "10:00"
     },
     "lembretes": {
       "consultas": [
