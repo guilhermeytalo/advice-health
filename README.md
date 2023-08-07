@@ -35,3 +35,9 @@ Após clonar o projeto localmente e estar na pasta do projeto no terminal faça 
 ## Deploy
 
 Caso queira ver o projeto deployado [clique aqui](https://advicehealth.netlify.app/).
+
+
+## Melhorias
+- [ ] Implementação de toggle para sidebar
+- [ ] Implementação de responsividade
+- [ ] Criação das páginas de agendamento e consulta
