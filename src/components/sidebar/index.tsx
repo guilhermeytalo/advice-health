@@ -47,10 +47,10 @@ function SidebarDefault() {
   return (
     <div>
       <div className="header" id="header">
-        {/* <div className="header_toggle">
+        <div className="header_toggle">
           {' '}
           <i className="bx bx-menu" id="header-toggle"></i>{' '}
-        </div> */}
+        </div>
         <div className="header_img">
           {' '}
           <img src={img} alt="" />{' '}
