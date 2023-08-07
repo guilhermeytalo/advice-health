@@ -3,8 +3,8 @@ import Table from 'react-bootstrap/Table';
 import './style.css';
 
 type TableProps = {
-  data: [];
-  columns?: [] | undefined;
+  data: TableData[];
+  columns?: string[] | undefined;
 };
 
 type TableData = {
@@ -15,17 +15,17 @@ type TableData = {
   medico?: string;
   status?: string;
   observacoes?: string;
-}
+};
 
 function TableDefault({ data }: TableProps) {
   useEffect(() => {
     console.log('props', data);
-  }, []);
+  }, [data]);
 
-  const table = data!.map((item: TableData) => (
+  const tableRows = data.map((item: TableData) => (
     <tr key={item.id}>
       <td>
-        <input type="checkbox" id="customCheck2" />
+        <input type="checkbox" id={`customCheck-${item.id}`} />
       </td>
       <td>{item.paciente}</td>
       <td>{item.data}</td>
@@ -37,13 +37,19 @@ function TableDefault({ data }: TableProps) {
   ));
 
   return (
-    <Table
-      striped
-      bordered
-      hover
-      style={{ textAlign: 'start' }}
-    >
-      {table}
+    <Table striped bordered hover style={{ textAlign: 'start' }}>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Paciente</th>
+          <th>Data</th>
+          <th>Hora</th>
+          <th>Médico</th>
+          <th>Status</th>
+          <th>Observações</th>
+        </tr>
+      </thead>
+      <tbody>{tableRows}</tbody>
     </Table>
   );
 }

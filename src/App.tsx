@@ -6,6 +6,7 @@ import SearchInput from './components/search/index.tsx';
 import { useEffect, useState } from 'react';
 import api from './data/api.json';
 import CalendarDefault from './components/calendar/index.tsx';
+import { TableData } from './utils.ts';
 
 function App() {
   const data = api;
@@ -13,24 +14,23 @@ function App() {
   const estatisticas = data.estatisticas;
   const lembretes = data.lembretes.consultas;
   const [searchPatientData, setSearchPatientData] = useState('');
-  const [filteredData, setFilteredData] = useState([]);
-
+  const [filteredData, setFilteredData] = useState<TableData[]>([]);
 
   useEffect(() => {
-    console.log(lembretes);
     setFilteredData(
-      lembretes.filter((item) =>
-        item.paciente.toLowerCase().includes(searchPatientData.toLowerCase()) || 
-        item.medico.toLowerCase().includes(searchPatientData.toLowerCase()) || 
-        item.status.toLowerCase().includes(searchPatientData.toLowerCase())
+      lembretes.filter(
+        (item) =>
+          item.paciente.toLowerCase().includes(searchPatientData.toLowerCase()) ||
+          item.medico.toLowerCase().includes(searchPatientData.toLowerCase()) ||
+          item.status.toLowerCase().includes(searchPatientData.toLowerCase())
       )
     );
-  }, []);
+  }, [searchPatientData]);
 
   return (
     <Container className="mainContent">
       <Row className="cardContent">
-        <SearchInput value={searchPatientData} />
+        <SearchInput value={searchPatientData} onChange={setSearchPatientData} />
         <h3>DASHBOARD</h3>
         <div className="card">
           <div className="cardMonth">
@@ -52,7 +52,7 @@ function App() {
         </div>
         <h3>AVISOS/LEMBRETES</h3>
         <div className="tableContent">
-          <TableDefault data={filteredData || lembretes} />
+          <TableDefault data={filteredData.length > 0 ? filteredData : lembretes} />
         </div>
       </Row>
       <Row className="calendarContent">
