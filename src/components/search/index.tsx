@@ -1,11 +1,17 @@
+import { FormEventHandler } from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
-function SearchInput() {
+type SearchInputProps = {
+  value: FormEventHandler<HTMLFormElement>;
+};
 
+function SearchInput({
+  value,  
+}: SearchInputProps) {
   return (
-    <Form>
+    <Form onChange={value}>
       <Row className="mb-3">
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Control

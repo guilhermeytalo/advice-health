@@ -1,67 +1,49 @@
+import { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
+import './style.css';
 
-function TableDefault() {
+type TableProps = {
+  data: [];
+  columns?: [] | undefined;
+};
+
+type TableData = {
+  id?: number;
+  paciente?: string;
+  hora?: string;
+  data?: string;
+  medico?: string;
+  status?: string;
+  observacoes?: string;
+}
+
+function TableDefault({ data }: TableProps) {
+  useEffect(() => {
+    console.log('props', data);
+  }, []);
+
+  const table = data!.map((item: TableData) => (
+    <tr key={item.id}>
+      <td>
+        <input type="checkbox" id="customCheck2" />
+      </td>
+      <td>{item.paciente}</td>
+      <td>{item.data}</td>
+      <td>{item.hora}</td>
+      <td>{item.medico}</td>
+      <td>{item.status}</td>
+      <td>{item.observacoes}</td>
+    </tr>
+  ));
+
   return (
-    <Table striped bordered hover style={{ textAlign: 'center'}}>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-          <th>5 Username</th>
-          <th>6 Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div>
-              <input type="checkbox" id="customCheck2" />
-            </div>
-          </td>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <input type="checkbox" id="customCheck2" />
-            </div>
-          </td>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <input type="checkbox" id="customCheck2" />
-            </div>
-          </td>
-          <td>3</td>
-          <td>Larry the Bird</td>
-          <td>@twitter</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>
-            <div>
-              <input type="checkbox" id="customCheck2" />
-            </div>
-          </td>
-          <td>4</td>
-          <td>@test</td>
-          <td>@twitter</td>
-          <td>@fat</td>
-          <td>@fat</td>
-        </tr>
-      </tbody>
+    <Table
+      striped
+      bordered
+      hover
+      style={{ textAlign: 'start' }}
+    >
+      {table}
     </Table>
   );
 }
