@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import api from './data/api.json';
 import CalendarDefault from './components/calendar/index.tsx';
 import { TableData } from './utils.ts';
+import SidebarDefault from './components/sidebar/index.tsx';
 
 function App() {
   const data = api;
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <Container className="mainContent">
+      <SidebarDefault />
       <Row className="cardContent">
         <SearchInput value={searchPatientData} onChange={setSearchPatientData} />
         <h3>DASHBOARD</h3>

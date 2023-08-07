@@ -18,7 +18,7 @@ function CardDefault({
 
   return (
     <Card style={{ display: 'flex', flexDirection: 'row' }}>
-      <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'red', margin: '10px' }}>
+      <div style={{ width: '40px', height: '40px', borderRadius: '50%', margin: '10px' }}>
         <Card.Img variant="top" src={img} />
       </div>
       <Card.Body style={{ margin: '0' }}>
