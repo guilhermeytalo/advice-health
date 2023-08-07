@@ -34,4 +34,4 @@ Após clonar o projeto localmente e estar na pasta do projeto no terminal faça 
 
 ## Deploy
 
-Caso queira ver o projeto deployado [clique aqui]().
+Caso queira ver o projeto deployado [clique aqui](https://advicehealth.netlify.app/).
