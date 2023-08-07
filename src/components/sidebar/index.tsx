@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './styles.css';
-import { Nav } from 'react-bootstrap';
 
 function SidebarDefault() {
   useEffect(() => {
