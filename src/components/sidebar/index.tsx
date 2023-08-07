@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import './styles.css';
+import personProfile from '../../assets/personProfile.svg';
 
 function SidebarDefault() {
+  const img = personProfile;
   useEffect(() => {
     const showNavbar = (
       toggleId: string,
@@ -45,13 +47,13 @@ function SidebarDefault() {
   return (
     <div>
       <div className="header" id="header">
-        <div className="header_toggle">
+        {/* <div className="header_toggle">
           {' '}
           <i className="bx bx-menu" id="header-toggle"></i>{' '}
-        </div>
+        </div> */}
         <div className="header_img">
           {' '}
-          <img src="https://i.imgur.com/hczKIze.jpg" alt="" />{' '}
+          <img src={img} alt="" />{' '}
         </div>
       </div>
       <div className="l-navbar" id="nav-bar">
