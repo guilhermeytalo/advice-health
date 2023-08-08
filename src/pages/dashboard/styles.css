@@ -1,0 +1,28 @@
+.mainContent {
+    flex-direction: row;
+    display: flex;
+  }
+  
+  .cardContent {
+    margin-right: 40px;
+  }
+  
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cardMonth {
+    width: 300px;
+  }
+  
+  .cardStatus {
+    width: 200px;
+  }
+  
+  .calendarContent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
