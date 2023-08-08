@@ -9,13 +9,13 @@ export const sideBarData = [
   },
   {
     title: 'Consultas',
-    path: '/consultas',
+    path: '/consulta',
     icon: <BsIcons.BsSend />,
     cName: 'nav-text',
   },
   {
     title: 'Agendamentos',
-    path: '/agendamentos',
+    path: '/agendamento',
     icon: <BsIcons.BsFileCheck />,
     cName: 'nav-text',
   },
