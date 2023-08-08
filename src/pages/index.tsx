@@ -5,7 +5,7 @@ export const Pages = () => {
   return (
     <div>
       <SidebarDefault />
-      <Dashboard />
+        <Dashboard />
     </div>
   );
 };

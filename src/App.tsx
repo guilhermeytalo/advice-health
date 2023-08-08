@@ -4,17 +4,15 @@ import { Agendamento } from './pages/agendamento/index.tsx';
 import { Pages } from './pages/index.tsx';
 
 function App() {
- 
-
   return (
-   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Pages />} />
-      <Route path="dashboard" element={<Pages />} />
-      <Route path="consulta" element={<Consulta />} />
-      <Route path="agendamento" element={<Agendamento />} />
-    </Routes>
-   </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Pages />} />
+        <Route path="dashboard" element={<Pages />} />
+        <Route path="consulta" element={<Consulta />} />
+        <Route path="agendamento" element={<Agendamento />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
