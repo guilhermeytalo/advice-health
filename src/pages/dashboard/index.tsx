@@ -1,4 +1,3 @@
-import '../styles.css';
 import { Container, Row } from 'react-bootstrap';
 import CardDefault from '../../components/card/index.tsx';
 import TableDefault from '../../components/table/index.tsx';
@@ -7,6 +6,7 @@ import { useEffect, useState } from 'react';
 import api from '../../data/api.json';
 import CalendarDefault from '../../components/calendar/index.tsx';
 import { TableData } from '../../utils.ts';
+import './styles.css';
 
 function Dashboard() {
   const data = api;

@@ -26,6 +26,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
 .menu-bars {
