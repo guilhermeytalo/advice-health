@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
-import personProfile from '../../assets/personProfile.svg';
+import { profile } from '../../assets';
+
 type CardProps = {
   title?: string;
   text?: string;
@@ -14,12 +15,12 @@ function CardDefault({
   subText,
 }: CardProps) {
 
-  const img = personProfile;
+  
 
   return (
     <Card style={{ display: 'flex', flexDirection: 'row' }}>
       <div style={{ width: '40px', height: '40px', borderRadius: '50%', margin: '10px' }}>
-        <Card.Img variant="top" src={img} />
+        <Card.Img variant="top" src={profile} />
       </div>
       <Card.Body style={{ margin: '0' }}>
         <h5 style={{ margin: '0' }}>{title}</h5>

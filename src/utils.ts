@@ -1,3 +1,4 @@
+
 export type TableData = {
     id?: number;
     paciente?: string;

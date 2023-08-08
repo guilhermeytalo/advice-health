@@ -38,6 +38,8 @@ Caso queira ver o projeto deployado [clique aqui](https://advicehealth.netlify.a
 
 
 ## Melhorias
-- [ ] Implementação de toggle para sidebar
+- [x] Implementação de toggle para sidebar
 - [ ] Implementação de responsividade
 - [ ] Criação das páginas de agendamento e consulta
+   - [ ] Consulta
+   - [x] Agendamento
