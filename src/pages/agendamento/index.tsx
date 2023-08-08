@@ -29,6 +29,7 @@ export const Agendamento = () => {
         <SearchInput
           value={searchPatientData}
           onChange={setSearchPatientData}
+          placeholder='BUSCA RÁPIDA'
         />
         <div>
           <TableDefault

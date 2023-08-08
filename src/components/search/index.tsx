@@ -6,9 +6,10 @@ import Row from 'react-bootstrap/Row';
 type SearchInputProps = {
   value: string;
   onChange: (value: string) => void;
+  placeholder?: string;
 };
 
-function SearchInput({ onChange }: SearchInputProps) {
+function SearchInput({ onChange, placeholder = 'BUSCA' }: SearchInputProps) {
   const [searchValue, setSearchValue] = useState('');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +26,7 @@ function SearchInput({ onChange }: SearchInputProps) {
             style={{ width: '100%', padding: '10px' }}
             required
             type="text"
-            placeholder="BUSCA"
+            placeholder={placeholder}
             value={searchValue}
             onChange={handleChange}
           />
