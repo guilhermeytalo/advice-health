@@ -1,16 +1,9 @@
-import { useEffect } from 'react';
-import { Image, ListGroup } from 'react-bootstrap';
-import { profile } from '../../assets';
 import CalendarDefault from '../../components/calendar';
 import CardDefault from '../../components/card';
 import { data } from '../../data/data';
 
 export const Consulta = () => {
   const proximosEventos = data.proximosEventos;
-
-  useEffect(() => {
-    console.log('consulta', data);
-  }, []);
 
   return (
     <div>

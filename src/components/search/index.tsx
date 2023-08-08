@@ -15,7 +15,7 @@ function SearchInput({ onChange, placeholder = 'BUSCA' }: SearchInputProps) {
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     setSearchValue(value);
-    onChange(value); // Notify the parent component about the value change
+    onChange(value);
   };
 
   return (
