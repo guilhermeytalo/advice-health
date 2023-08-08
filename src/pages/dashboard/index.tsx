@@ -3,13 +3,12 @@ import CardDefault from '../../components/card/index.tsx';
 import TableDefault from '../../components/table/index.tsx';
 import SearchInput from '../../components/search/index.tsx';
 import { useEffect, useState } from 'react';
-import api from '../../data/api.json';
 import CalendarDefault from '../../components/calendar/index.tsx';
 import { TableData } from '../../utils.ts';
 import './styles.css';
+import { data } from '../../data/data.ts';
 
 function Dashboard() {
-  const data = api;
   const proximosEventos = data.proximosEventos;
   const estatisticas = data.estatisticas;
   const lembretes = data.lembretes.consultas;

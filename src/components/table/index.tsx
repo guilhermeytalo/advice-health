@@ -19,7 +19,6 @@ type TableData = {
 
 function TableDefault({ data }: TableProps) {
   useEffect(() => {
-    console.log('props', data);
   }, [data]);
 
   const tableRows = data.map((item: TableData) => (

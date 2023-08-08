@@ -1,0 +1,8 @@
+.mainContent {
+    flex-direction: row;
+    display: flex;
+  }
+  
+  .cardContent {
+    margin-right: 40px;
+  }
